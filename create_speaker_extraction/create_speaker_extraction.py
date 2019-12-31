@@ -24,7 +24,7 @@ def create_speaker_extraction_data():
             mix_name = s1_uttid + '_' + tokens[1] + '_' + s2_uttid + '_' + tokens[3] + '.wav'
             speaker_extraction_mix_name = s1_uttid + '_' + tokens[1] + '_' + s2_uttid + '_' + tokens[3] + '_' + aux_uttid + '.wav'
             mix_path = os.path.join(WSJ0_MC_DATA_DIR, '2speakers_reverb', 'wav8k', 'max', data_type, 'mix', mix_name)
-            s1_path = os.path.join(WSJ0_MC_DATA_DIR, '2speakers_reverb', 'wav8k', 'max', data_type, 's1', mix_name)
+            s1_path = os.path.join(WSJ0_MC_DATA_DIR, '2speakers_anechoic', 'wav8k', 'max', data_type, 's1', mix_name)
             aux_path = os.path.join(WSJ0_DATA_DIR, tokens[4].replace('.wv1', '.wav'))
             if not os.path.exists(os.path.join(TARGET_DIR, data_type)):
                 #os.makedirs(os.path.join(TARGET_DIR, data_type, 'mix'))
